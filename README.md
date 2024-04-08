@@ -49,28 +49,34 @@ Tato kapitola slouží jako průvodce katalogem cviků, který ma sloužit jako 
 - **Příklad:** 1. Postavte se rovně s nohama ve šíři ramen. 2. Pomalu se ohněte v kolenou...
 
 ## Design a uživatelské rozhraní
-
 ### Barevná paleta
-Primární barva:
-Sekundární barva: rovnoměrný linearní gradient
+Pozadí: #353535
+Gradient: lineární rovnoměrně barvy #FE0000 s barvou #0381F5
+Primární: #2A2A2A
+Seknudární: #404040
+
 ### Ikony
 Ve složce ikony jsou uloženy veškeré potřebné ikony ve formátu SVG.
 ### Homepage
 V dolní části se nachází menu, přes které se lze dostat do tří základních částí aplikace - přehled vytvořených plánů (homepage), sestavení nového tréninkového plánu a moje data.
 Na homepage je zobrazen přehled všech vytvořených plánů uživatelem (v případě, že se nevejdou na obrazovku, tak je potřeba vertikálně skrolovat). Pro spuštění plánu je potřeba na něj kliknout.
-![homepage] (./img/homepage.png)
+
+![homepage](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/homepage.png)
 
 #### Spuštěný plán
 Nahoře se nacházejí stopky, které měří uplynulý čas při cvičení. Lze je pozastavit pomocí tlačítka pauza dole, stejným tlačítkem se opět spustí. Pod názvem plánu a stopkami se nachází seznam cviků. Vedle každého cviku se nachází ikona, na kterou uživatel klikne, když je s cvikem hotov. Ve chvíli kdy jsou zakliknuta veškerá cvičení, tak je plán ukončen pomocí jediného tlačítka dole, poté je uživatel přesměrován na homepage. Plán lze i předčasně ukončit pomocí tlačítka vedle tlačítka pauza, po té je uživatel automaticky přesměrován na homepage.
-![spuštěný plán]()
-![dokončený plán]()
+
+![spuštěný plán](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/spusteny_plan.png)
+
+![dokončený plán](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/dokonceny_plan.png)
 
 ### Nový plán
 V této části je možné vytvořit nový plán, který se po uložení zobrazí na homepage.
 
 ### Moje data
 Zde si uživatel zapisuje svoji váhu, obvod pasu, procentuální míru tuku a svalů. Zároveň je zde vidět celkový čas strávený cvičením.
-![moje data]()
+
+![moje data](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/moje_data.png)
 
 
 
