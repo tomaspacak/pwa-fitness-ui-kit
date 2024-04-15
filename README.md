@@ -68,10 +68,9 @@ Nahoře se nacházejí stopky, které měří uplynulý čas při cvičení. Lze
 
 ![spuštěný plán](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/spusteny_plan.png)
 
-![dokončený plán](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/dokonceny_plan.png)
-
 ### Nový plán
 V této části je možné vytvořit nový plán, který se po uložení zobrazí na homepage.
+![tvorba nového plánu]()
 
 ### Moje data
 Zde si uživatel zapisuje svoji váhu, obvod pasu, procentuální míru tuku a svalů. Zároveň je zde vidět celkový čas strávený cvičením.
