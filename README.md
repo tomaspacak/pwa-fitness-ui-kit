@@ -1,5 +1,5 @@
-# My workout - fitness aplikace
-Obsahem tohoto repozitáře jsou podklady pro vytvoření fitness aplikace, která se soustředí možnost sestavení svých vlastních tréninkových plánů. Jednotlivé podklady jsou rozebrány v tomto souboru.
+# My workout - fitness PWA aplikace
+Obsahem tohoto repozitáře jsou podklady pro vytvoření fitness aplikace, která se soustředí možnost sestavení svých vlastních tréninkových plánů. Jednotlivé podklady jsou rozebrány v tomto souboru. Realizace projektu se předpokládá v PWA.
 
 ## Tabulka - katalog cviků
 Tato kapitola slouží jako průvodce katalogem cviků, který ma sloužit jako podklad pro vytvoření databáze cviků pro fitness aplikaci. Tabulka je rozdělena do několika sloupců, které obsahují potřebné informace o jednotlivých cvicích. Sloupce Kategorie I a Kategorie II by měly být implementovány jako atribut v databázovém modelu, aby uživatelé mohly snadno filtrovat cviky podle jejich preferencí. Níže je popsán účel a obsah každého sloupce:
@@ -56,7 +56,7 @@ Primární: #2A2A2A
 Seknudární: #404040
 
 ### Ikony
-Ve složce ikony jsou uloženy veškeré potřebné ikony ve formátu SVG.
+Ve složce icons jsou uloženy veškeré potřebné ikony ve formátu SVG.
 ### Homepage
 V dolní části se nachází menu, přes které se lze dostat do tří základních částí aplikace - přehled vytvořených plánů (homepage), sestavení nového tréninkového plánu a moje data.
 Na homepage je zobrazen přehled všech vytvořených plánů uživatelem (v případě, že se nevejdou na obrazovku, tak je potřeba vertikálně skrolovat). Pro spuštění plánu je potřeba na něj kliknout.
