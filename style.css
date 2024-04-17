@@ -1,0 +1,118 @@
+
+:root {
+    --bg: #353535;
+    --components: #2A2A2A;
+    --text: rgb(255, 255, 255);
+    --gradient: linear-gradient(to right, #FE0000, #0381F5);
+    --componentRadius: 0.5rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+.gradText {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100dvh - 5em);
+    justify-content: space-between;
+    margin: 1rem 0.5rem 0.1rem 0.5rem;
+}
+
+/*moje plány*/
+.plan_wrapper {
+    display: grid;
+    gap: 1em;
+    overflow-y: auto;
+}
+.plan {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    background-color: var(--components);
+    color: var(--text);
+    /*border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #FE0000, #0381F5) 1;
+    border-radius: 50px;
+    border-radius: 25px;*/
+}
+.plan:before {
+    content: "";
+    position: absolute;
+    top: -0.2em;
+    left: -0.2em;
+    right:-0.2em;
+    bottom: -0.2em;
+    border-radius: 25px;
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    z-index: -1;
+}
+.plan_img {width: 40px;}
+
+/*bar*/
+.bar__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #FE0000, #0381F5);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.bar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar__img {width: 40px;}
+
+
+
+
+/*moje data*/
+
+.data__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+.data__item {
+    position: relative;
+    background-color: var(--components);
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: var(--componentRadius);
+}
+.data__item p {margin: 0;}
+.data__item::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0.4em;
+    right: 0.4em;
+    background-image: url(./icons/upravit.svg);
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.spendTime {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 1rem;
+    background-color: var(--components);
+    border-radius: var(--componentRadius);
+    margin-top: 1rem;
+}
