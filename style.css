@@ -5,6 +5,9 @@
     --text: rgb(255, 255, 255);
     --gradient: linear-gradient(to right, #FE0000, #0381F5);
     --componentRadius: 0.5rem;
+    --vysledkyVyhledavani: #4A4A4A;
+    --line: #ADADAD;
+    --workout: #404040;
 }
 
 body {
@@ -23,7 +26,7 @@ body {
     flex-direction: column;
     height: calc(100dvh - 5em);
     justify-content: space-between;
-    margin: 1rem 0.5rem 0.1rem 0.5rem;
+    margin: 2rem 0.5rem 0.1rem 0.5rem;
 }
 
 /*moje plány*/
@@ -32,30 +35,20 @@ body {
     gap: 1em;
     overflow-y: auto;
 }
+.plan__border {
+    background: var(--gradient);
+    padding: 0.3rem;
+    border-radius: calc(var(--componentRadius) + 0.3rem);
+}
 .plan {
     display: flex;
     position: relative;
     gap: 1rem;
     background-color: var(--components);
     color: var(--text);
-    /*border-radius: 5px;
-    border-width: 3px;
-    border-style: solid;
-    border-image: linear-gradient(to right, #FE0000, #0381F5) 1;
-    border-radius: 50px;
-    border-radius: 25px;*/
+    border-radius: var(--componentRadius);
 }
-.plan:before {
-    content: "";
-    position: absolute;
-    top: -0.2em;
-    left: -0.2em;
-    right:-0.2em;
-    bottom: -0.2em;
-    border-radius: 25px;
-    background: linear-gradient(to right, #ff0000, #0000ff);
-    z-index: -1;
-}
+
 .plan_img {width: 40px;}
 
 /*bar*/
@@ -79,6 +72,67 @@ body {
 .bar__img {width: 40px;}
 
 
+/*novy plan*/
+
+
+.search__filter {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--components);
+    border-radius: var(--componentRadius);
+    margin-bottom: 0.5em;
+}
+
+.vysledkyVyhledavani {
+    
+    overflow-y: auto;
+    padding: 1.5em;
+    border-radius: var(--componentRadius);
+    background-color: var(--vysledkyVyhledavani);
+}
+.vysledkyVyhledavani__item {
+    font-weight: 500;
+    padding-bottom: 0.5em;
+    margin-right: 4em;
+    border-bottom: 1px solid var(--line);
+}
+.workout {
+    padding: 1em;
+    border-radius: var(--componentRadius);
+    background-color: var(--workout);
+    margin-bottom: 2rem;
+}
+.cvik {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--components);
+    border-radius: var(--componentRadius);
+    padding: 0 1em;
+    margin-bottom: 0.5em;
+}
+.cvik__data {
+    display: flex;
+    /* align-content: center; */
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-direction: row;
+    gap: 2em;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    background: var(--gradient);
+    color: var(--text);
+    border-radius: var(--componentRadius);
+}
 
 
 /*moje data*/

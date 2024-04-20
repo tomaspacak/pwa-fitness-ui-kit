@@ -25,6 +25,12 @@ h1 {
     font-weight: 600;
 }
 
-a {text-decoration: none;}
+a {text-decoration: none; color: white;}
 
 .data__number {font-size: 2rem; font-weight: 600;}
+
+.filter__item {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0.6rem 0;
+}

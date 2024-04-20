@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./typography.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <title>Nový plán</title>
 </head>
 <body>
-    
+    <header>
+        <h1><a href="./index.html"><span class="gradText">My</span> workout</a></h1>
+    </header>
+    <div class="pageWrapper">
+        <div class="wrapper">
+            <div>
+                <div class="search">
+                    <div></div>
+                    <div class="search__filter">
+                        <p class="filter__item">S vlastní vahou</p><p class="filter__item">S vybavením</p>
+                    </div>
+                    <div class="search__filter">
+                        <p class="filter__item">Nohy</p><p class="filter__item">Záda</p><p class="filter__item">Břicho</p><p class="filter__item">Ruce</p><p class="filter__item">Ramena</p>
+                    </div>
+                </div>
+                <div class="vysledkyVyhledavani">
+                    <p class="vysledkyVyhledavani__item">Dřepy</p><p class="vysledkyVyhledavani__item">Výpady</p><p class="vysledkyVyhledavani__item">Hipthruts</p>
+                </div>
+            </div>
+            <div class="workout">
+                <textarea class="workout__name" name="#" id="#" cols="30" rows="1"></textarea>
+                <div>
+                    <div class="cvik">
+                        <p>Dřepy</p>
+                        <div class="cvik__data">
+                            <p>série: 2</p><p>opakování: 10</p>
+                            <div><img src="./icons/info.svg" alt="informace o cviku"></div>
+                        </div>
+                    </div>
+                    <div class="cvik">
+                        <p>Kliky</p>
+                        <div class="cvik__data">
+                            <p>série: 1</p><p>opakování: 10</p>
+                            <div><img src="./icons/info.svg" alt="informace o cviku"></div>
+                        </div>
+                    </div>
+                    <div class="cvik">
+                        <p>Dřepy</p>
+                        <div class="cvik__data">
+                            <p>série: 2</p><p>opakování: 10</p>
+                            <div><img src="./icons/info.svg" alt="informace o cviku"></div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn" href="#">Uložit</a>
+            </div>
+        </div>
+        <div class="bar">
+            <div class="bar__wrapper">
+                <a href="./index.html">
+                    <div class="bar__item">
+                        <img class="bar__img" src="./icons/menu_plany.svg" alt="ikona pro plány">
+                        <p class="bar__text">Plány</p>
+                    </div>
+                </a>
+                <a href="./novyPlan.html">
+                    <div class="bar__item">
+                        <img class="bar__img" src="./icons/menu_novyPlan.svg" alt="ikona pro plány">
+                        <p class="bar__text">Nový plán</p>
+                    </div>
+                </a>
+                <a href="./mojeData.html">
+                    <div class="bar__item">
+                        <img class="bar__img" src="./icons/menu_mojeData.svg" alt="ikona pro plány">
+                        <p class="bar__text">Moje data</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
