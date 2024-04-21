@@ -4,6 +4,7 @@
     --components: #2A2A2A;
     --text: rgb(255, 255, 255);
     --gradient: linear-gradient(to right, #FE0000, #0381F5);
+    --barGradient: linear-gradient(to left, #FE0000, #0381F5);
     --componentRadius: 0.5rem;
     --vysledkyVyhledavani: #4A4A4A;
     --line: #ADADAD;
@@ -15,18 +16,20 @@ body {
     background-color: var(--bg);
 }
 .gradText {
-    background: var(--gradient);
+    background: var(--barGradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
+img {width: 100%;}
+
 .pageWrapper {
     display: flex;
     flex-direction: column;
-    height: calc(100dvh - 5em);
+    height: calc(100dvh - 6.3rem);
     justify-content: space-between;
-    margin: 2rem 0.5rem 0.1rem 0.5rem;
+    margin: 2rem 1rem 0.1rem 1rem;
 }
 
 /*moje plány*/
@@ -35,11 +38,12 @@ body {
     gap: 1em;
     overflow-y: auto;
 }
-.plan__border {
+.border {
     background: var(--gradient);
-    padding: 0.3rem;
-    border-radius: calc(var(--componentRadius) + 0.3rem);
+    padding: 0.2rem;
+    border-radius: calc(var(--componentRadius) + 0.2rem);
 }
+
 .plan {
     display: flex;
     position: relative;
@@ -58,9 +62,10 @@ body {
     align-content: center;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(to right, #FE0000, #0381F5);
+    background: var(--barGradient);
     padding: 1em;
     border-radius: 0.5em;
+    margin-top: 2rem;
 }
 
 .bar__item {
@@ -82,13 +87,24 @@ body {
     border-radius: var(--componentRadius);
     margin-bottom: 0.5em;
 }
-
+.filter__item:focus {
+    background-image: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.filter__item--1:focus {
+    background-image: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
 .vysledkyVyhledavani {
-    
     overflow-y: auto;
     padding: 1.5em;
     border-radius: var(--componentRadius);
     background-color: var(--vysledkyVyhledavani);
+    margin-bottom: 2rem;
 }
 .vysledkyVyhledavani__item {
     font-weight: 500;
@@ -100,7 +116,6 @@ body {
     padding: 1em;
     border-radius: var(--componentRadius);
     background-color: var(--workout);
-    margin-bottom: 2rem;
 }
 .cvik {
     display: flex;
@@ -132,7 +147,21 @@ body {
     background: var(--gradient);
     color: var(--text);
     border-radius: var(--componentRadius);
+    font-size: 1.2rem;                          /*typography*/
+    font-weight: 600;
+    margin-top: 2rem;
 }
+
+.workout__name::before {
+    content: "";
+    display: inline-block;
+    background-image: url(./icons/cinka.svg);
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.workout_wrapper {overflow-y: auto;}
 
 
 /*moje data*/
@@ -141,6 +170,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
+    margin-bottom: 1rem;
 }
 .data__item {
     position: relative;
@@ -168,5 +198,65 @@ body {
     padding: 0.3rem 1rem;
     background-color: var(--components);
     border-radius: var(--componentRadius);
-    margin-top: 1rem;
+}
+
+/*spusteny plan*/
+
+.border--plan {
+    max-width: 50rem;
+    padding: 0.2rem;
+    background: var(--gradient);
+    border-radius: calc(var(--componentRadius) + 0.2rem);
+    margin-bottom: 2rem;
+}
+.plan--aktiv {
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.plan__time::after {
+    content: "";
+    display: inline-block;
+    background-image: url(./icons/time.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 0.6em;
+    height: 0.6em;
+    margin-bottom: -0.1em;
+    margin-left: 0.2em;
+}
+.btnsContainer {
+    display: flex;
+    gap: 1.5rem;
+}
+.btn--plan {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+.btn--end {
+    flex-grow: 2;
+    background: none;
+    background-color: var(--components);
+}
+.btn--pauza {
+    flex-grow: 1;
+}
+.plan__inf {width: 1.5em;}
+.cvik--aktiv {position: relative; margin-right: 3em;}
+.cvik--done::after {
+    content: "";
+    display: inline-block;
+    background-image: url(./icons/done.svg);
+    position: absolute;
+    right: -3em;
+    top: 25%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+}
+.cvik--undone::after {
+    background-image: url(./icons/undone.svg);
 }
