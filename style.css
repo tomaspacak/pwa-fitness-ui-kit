@@ -121,7 +121,8 @@ img {width: 100%;}
     border-radius: var(--componentRadius);
     background-color: var(--workout);
 }
-.workout__wrapper {overflow-y: auto; max-height: 15vh;}
+.workout__wrapper {overflow-y: auto; max-height: 65vh;}
+.workout__wrapper--novy {max-height: 15vh;}
 .cvik {
     display: flex;
     justify-content: space-between;
@@ -163,6 +164,7 @@ img {width: 100%;}
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .workout_wrapper {overflow-y: auto;}
 
 
@@ -329,7 +331,8 @@ img {width: 100%;}
         left: 50%;
         margin-top: 2em;
     }
-    .workout__wrapper {max-height: 15dvh;}
+    .workout__wrapper {max-height: 45dvh;}
+    .workout__wrapper--novy {max-height: 15dvh;}
     
 
 }
@@ -378,5 +381,6 @@ img {width: 100%;}
     small {
         font-size: 1rem;
     }
-    .workout__wrapper {max-height: 28dvh;}
+    .workout__wrapper {max-height: 65dvh;}
+    .workout__wrapper--novy {max-height: 28dvh;}
 }
