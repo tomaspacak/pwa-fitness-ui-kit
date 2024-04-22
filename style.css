@@ -42,6 +42,7 @@ img {width: 100%;}
     background: var(--gradient);
     padding: 0.2rem;
     border-radius: calc(var(--componentRadius) + 0.2rem);
+    height: fit-content;
 }
 
 .plan {
@@ -98,13 +99,16 @@ img {width: 100%;}
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    font-weight: 600;
 }
 .vysledkyVyhledavani {
     overflow-y: auto;
-    padding: 1.5em;
+    padding: 1em;
     border-radius: var(--componentRadius);
     background-color: var(--vysledkyVyhledavani);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    min-height: 3em;
+    max-height: 7em;
 }
 .vysledkyVyhledavani__item {
     font-weight: 500;
@@ -117,6 +121,7 @@ img {width: 100%;}
     border-radius: var(--componentRadius);
     background-color: var(--workout);
 }
+.workout__wrapper {overflow-y: auto; max-height: 15vh;}
 .cvik {
     display: flex;
     justify-content: space-between;
@@ -127,7 +132,6 @@ img {width: 100%;}
 }
 .cvik__data {
     display: flex;
-    /* align-content: center; */
     align-items: center;
     justify-content: flex-end;
     flex-grow: 1;
@@ -147,12 +151,10 @@ img {width: 100%;}
     background: var(--gradient);
     color: var(--text);
     border-radius: var(--componentRadius);
-    font-size: 1.2rem;                          /*typography*/
-    font-weight: 600;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
-.workout__name::before {
+.workout__container::before {
     content: "";
     display: inline-block;
     background-image: url(./icons/cinka.svg);
@@ -164,6 +166,7 @@ img {width: 100%;}
 .workout_wrapper {overflow-y: auto;}
 
 
+
 /*moje data*/
 
 .data__wrapper {
@@ -171,6 +174,23 @@ img {width: 100%;}
     grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
     margin-bottom: 1rem;
+}
+.userName {
+    display: inline-block;
+    height: 1em;
+    background-color: var(--bg);
+    border: none;
+    overflow: hidden;
+    color: var(--text);
+    width: -webkit-fill-available;
+}
+.userName:focus {outline: none;}
+.userName--workoutN {
+    width: auto;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    min-width: 3em;
+    max-width: 6em;
 }
 .data__item {
     position: relative;
@@ -243,6 +263,10 @@ img {width: 100%;}
 .btn--pauza {
     flex-grow: 1;
 }
+.btnsContainer--plan {
+    display: flex;
+    flex-direction: row-reverse;
+}
 .plan__inf {width: 1.5em;}
 .cvik--aktiv {position: relative; margin-right: 3em;}
 .cvik--done::after {
@@ -259,4 +283,100 @@ img {width: 100%;}
 }
 .cvik--undone::after {
     background-image: url(./icons/undone.svg);
+}
+.btn:hover {
+    background: var(--barGradient);
+    transition: 0.25s;
+    transform: scale(1.03);
+}
+
+@media (min-width: 600px) {
+    .pageWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+    .bar, .btnsContainer {
+        max-width: 500px;
+        position: relative;
+        transform: translate(-50%, 0);
+        left: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .plan--aktiv, .border--plan {
+        max-width: 20em;
+    }
+
+    .spendTime {
+        justify-content: flex-start;
+        gap: 1em;
+        background: var(--gradient);
+        width: 15em;
+        border-radius: 2em;
+    }
+    .spendTime p {
+        font-size: 1.1rem;
+        margin: 0.4em;
+    }
+    .border--time {
+        background: var(--components);
+        padding: 0;
+        border-radius: 2em;
+        width: 80%;
+        position: relative;
+        transform: translate(-50%, 0);
+        left: 50%;
+        margin-top: 2em;
+    }
+    .workout__wrapper {max-height: 15dvh;}
+    
+
+}
+
+@media (min-width: 900px) {
+    h1 {
+        margin-bottom: 3rem;
+    }
+    .pageWrapper {
+        max-width: 800px;
+        height: calc(100dvh - 7.3rem);
+    }
+    
+    .plan_wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .data__wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+        height: auto;
+    }
+
+    .search__filter {
+        flex-direction: column;
+        padding: 1em;
+        width: 7em;
+    }
+    .search__wrapper {
+        display: flex;
+        gap: 0.5em;
+    }
+    .vysledkyVyhledavani {
+        max-height: 15em;
+        width: 12em;
+    }
+    .workout {
+        min-width: 25em;
+    }
+    
+    small {
+        font-size: 1rem;
+    }
+    .workout__wrapper {max-height: 28dvh;}
 }

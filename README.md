@@ -3,7 +3,6 @@ Obsahem tohoto repozitáře jsou podklady pro vytvoření fitness aplikace, kter
 
 [Statická šablona](https://pslib-cz.github.io/2023-l4-web-mockupapp-tomaspacak/index.html)
 
-[Figma](https://www.figma.com/file/9DXxChHeGP4BDehHDjOF50/mockapp?type=design&node-id=0%3A1&mode=design&t=EObn6nv1A6weqYdC-1)
 
 ## Tabulka - katalog cviků
 Tato kapitola slouží jako průvodce katalogem cviků, který ma sloužit jako podklad pro vytvoření databáze cviků pro fitness aplikaci. Tabulka je rozdělena do několika sloupců, které obsahují potřebné informace o jednotlivých cvicích. Sloupce Kategorie I a Kategorie II by měly být implementovány jako atribut v databázovém modelu, aby uživatelé mohly snadno filtrovat cviky podle jejich preferencí. Níže je popsán účel a obsah každého sloupce:
