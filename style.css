@@ -234,7 +234,13 @@ textarea:focus {outline: none;}
     background-color: transparent;
     color: var(--text);
     border: none;
-    width: auto;
+    width: -webkit-fill-available;
+    border: none;
+    outline: none;
+}
+.vyhledavani__input:focus {
+    border: none;
+    outline: none;
 }
 
 .spendTime {
@@ -359,12 +365,7 @@ textarea:focus {outline: none;}
     .vyhledavani {
         gap: 0.5em;
     }
-    .border--search {
-        transform: translate(0);
-        left: inherit;
-        width: 126px;
-    }
-    .vyhledavani__img {width: 2rem;}
+    /*.vyhledavani__img {width: 2rem;}*/
     
 
 }
@@ -415,4 +416,9 @@ textarea:focus {outline: none;}
     }
     .workout__wrapper {max-height: 65dvh;}
     .workout__wrapper--novy {max-height: 28dvh;}
+    .border--search {
+        transform: translate(0);
+        left: inherit;
+        width: 126px;
+    }
 }
