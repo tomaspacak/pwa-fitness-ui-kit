@@ -166,8 +166,7 @@ img {width: 100%;}
 }
 
 .workout_wrapper {overflow-y: auto;}
-
-
+textarea {resize: none;}
 
 /*moje data*/
 
@@ -186,7 +185,7 @@ img {width: 100%;}
     color: var(--text);
     width: -webkit-fill-available;
 }
-.userName:focus {outline: none;}
+textarea:focus {outline: none;}
 .userName--workoutN {
     width: auto;
     margin-bottom: 0.5rem;
@@ -212,6 +211,30 @@ img {width: 100%;}
     height: 32px;
     background-repeat: no-repeat;
     background-size: contain;
+}
+.vyhledavani {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: var(--components);
+    height: 2em;
+    padding: 0 1rem;
+    border-radius: 1em;
+}
+.vyhledavani__img {width: 1rem;}
+.border--search {
+    position: relative;
+    transform: translate(-50%, 0);
+    left: 50%;
+    margin-bottom: 0.5rem;
+    border-radius: 2em;
+    width: 80%;
+}
+.vyhledavani__input {
+    background-color: transparent;
+    color: var(--text);
+    border: none;
+    width: auto;
 }
 
 .spendTime {
@@ -333,6 +356,15 @@ img {width: 100%;}
     }
     .workout__wrapper {max-height: 45dvh;}
     .workout__wrapper--novy {max-height: 15dvh;}
+    .vyhledavani {
+        gap: 0.5em;
+    }
+    .border--search {
+        transform: translate(0);
+        left: inherit;
+        width: 126px;
+    }
+    .vyhledavani__img {width: 2rem;}
     
 
 }
