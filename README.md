@@ -1,65 +1,39 @@
 # My workout - fitness PWA aplikace
-Obsahem tohoto repozitáře jsou podklady pro vytvoření fitness aplikace, která se soustředí možnost sestavení svých vlastních tréninkových plánů. Jednotlivé podklady jsou rozebrány v tomto souboru. Realizace projektu se předpokládá v PWA.
+Tento projekt obsahuje návrh a podklady pro tvorbu **fitness aplikace**, která umožňuje uživatelům vytvářet vlastní tréninkové plány a sledovat jejich progress. Cílem bylo připravit podklady pro následnou realizaci jako **PWA (Progressive Web App)**.
 
-[Statická šablona](https://pslib-cz.github.io/2023-l4-web-mockupapp-tomaspacak/index.html)
+## Obsah
+- [Katalog cviků](#-katalog-cviků)
+- [Design a uživatelské rozhraní](#-design-a-uživatelské-rozhraní)
+- [Statická šablona](#-statická-šablona)
 
+---
 
-## Tabulka - katalog cviků
+## Katalog cviků
 Tato kapitola slouží jako průvodce katalogem cviků, který ma sloužit jako podklad pro vytvoření databáze cviků pro fitness aplikaci. Tabulka je rozdělena do několika sloupců, které obsahují potřebné informace o jednotlivých cvicích. Sloupce Kategorie I a Kategorie II by měly být implementovány jako atribut v databázovém modelu, aby uživatelé mohly snadno filtrovat cviky podle jejich preferencí. Níže je popsán účel a obsah každého sloupce:
-### Jméno Cviku
-- **Popis:** Oficiální název cviku
-- **Typ:** Text
-- **Příklad:** Dřepy, Bench press
 
-### ID
-- **Popis:** Jedinečný identifikátor cviku v databázi
-- **Typ:** Číslo
-- **Příklad:** 1, 2
+| Sloupec               | Popis |
+|-----------------------|-------|
+| **Jméno cviku**       | Oficiální název cviku |
+| **ID**                | Jedinečný identifikátor cviku v databázi |
+| **Kategorie I**       | Rozdělení cviků na cviky s vlastní vahou a cviky s vybavením |
+| **Kategorie II**      | Zaměření na svalovou skupinu (Nohy, Hrudník, Záda, Ramena, Břicho) |
+| **Popis**             | Stručný popis cviku|
+| **Náročnost**         | Obtížnost cviku (začátečník, středně pokročilý, pokročilý) |
+| **Primární svaly**    | Hlavní svalové skupiny aktivované během cviku |
+| **Sekundární svaly**  | Sekundární svalové skupiny, které cvik také zapojuje |
+| **Jak na to**         | Podrobnější popis správného provedení cviku |
 
-### Kategorie I
-- **Popis:** Rozdělení cviků na cviky s vlastní vahou nebo cviky s vybavením
-- **Typ:** Text
-- **Příklady:** S, P
-
-### Kategorie II
-- **Popis:** Specifikuje, na jakou svalovou skupinu je cvik zaměřen
-- **Typ:** Text
-- **Příklady:** Nohy, Hrudník, Záda, Ramena, Břicho
-
-### Popis
-- **Popis:** Stručný popis cviku
-- **Typ:** Text
-- **Příklad:** Dřepy jsou základní cvik na posílení dolní části těla, kde z pozice stojícího postavení  jdete do dřepu a zpět.
-
-### Náročnost
-- **Popis:** Obtížnost cviku pro orientační účely.
-- **Typ:** Text
-- **Příklady:** Začátečník, Střední, Pokročilý
-
-### Primární svaly
-- **Popis:** Hlavní svalové skupiny aktivované během cviku.
-- **Typ:** Text
-- **Příklady:** Quadriceps, Hamstrings, Glutes
-
-### Sekundární svaly
-- **Popis:** Sekundární svalové skupiny, které cvik také zapojuje, ale nejsou hlavním cílem.
-- **Typ:** Text
-- **Příklady:** Core, Lower back
-
-### Jak na to
-- **Popis:** Podrobnější popis správného provedení cviku.
-- **Typ:** Text
-- **Příklad:** 1. Postavte se rovně s nohama ve šíři ramen. 2. Pomalu se ohněte v kolenou...
+---
 
 ## Design a uživatelské rozhraní
-### Barevná paleta
-Pozadí: #353535
-Gradient: lineární rovnoměrně barvy #FE0000 s barvou #0381F5
-Primární: #2A2A2A
-Seknudární: #404040
+**Barevná paleta**
+ - Pozadí: #353535
+ - Gradient: lineární rovnoměrně barvy #FE0000 s barvou #0381F5
+ - Primární: #2A2A2A
+ - Seknudární: #404040
 
-### Ikony
-Ve složce icons jsou uloženy veškeré potřebné ikony ve formátu SVG.
+**Ikony**: ve složce icons jsou uloženy veškeré potřebné ikony ve formátu SVG.
+
 ### Homepage
 V dolní části se nachází menu, přes které se lze dostat do tří základních částí aplikace - přehled vytvořených plánů (homepage), sestavení nového tréninkového plánu a moje data.
 Na homepage je zobrazen přehled všech vytvořených plánů uživatelem (v případě, že se nevejdou na obrazovku, tak je potřeba vertikálně skrolovat). Pro spuštění plánu je potřeba na něj kliknout.
@@ -79,6 +53,10 @@ V této části je možné vytvořit nový plán, který se po uložení zobraz�
 Zde si uživatel zapisuje svoji váhu, obvod pasu, procentuální míru tuku a svalů. Zároveň je zde vidět celkový čas strávený cvičením.
 
 ![moje data](https://github.com/pslib-cz/2023-l4-web-mockupapp-tomaspacak/blob/main/img/moje_data.png)
+
+---
+## Statická šablona
+[Statická šablona](https://pslib-cz.github.io/2023-l4-web-mockupapp-tomaspacak/index.html)
 
 
 
